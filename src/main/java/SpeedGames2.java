@@ -5,25 +5,45 @@ public class SpeedGames2 {
 
     public static int[] speedCheckLosers(int[] players) {
 
-        int sum = 0;
+        if (isGreenLight = false) {
+            int sum = 0;
 
-        for (int player : players) {
-            if (player > MaxSpeed) {
+            for (int player : players) {
+                if (player > MaxSpeed) {
+                    sum++;
+                }
+
+            }
+
+            int[] speeds = new int[sum];
+            int i = 0;
+            for (int player : players) {
+                if (player > MaxSpeed) {
+                    speeds[i] = player;
+                    i++;
+                }
+
+            }
+            return speeds;
+
+        } else {
+            int sum = 0;
+            for (int player : players) {
                 sum++;
             }
 
-        }
 
-        int[] speeds = new int[sum];
-        int i = 0;
-        for (int player : players) {
-            if (player > MaxSpeed) {
+            int[] speeds = new int[sum];
+            int i = 0;
+            for (int player : players) {
                 speeds[i] = player;
                 i++;
             }
+            return speeds;
 
         }
-        return speeds;
 
     }
+
 }
+

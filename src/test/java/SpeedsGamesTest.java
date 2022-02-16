@@ -9,7 +9,7 @@ public class SpeedsGamesTest {
 
         int[] players = {5, 0, 2};
 
-        int expected = 1;
+        int expected = 3;
         int actual = SpeedsGames.speedCheckMas(players);
 
         Assertions.assertEquals(expected, actual);
@@ -22,7 +22,7 @@ public class SpeedsGamesTest {
 
         int[] players = {5, 0, 2};
 
-        int[] expected = {5};
+        int[] expected = {5,0,2};
         int[] actual = SpeedGames2.speedCheckLosers(players);
 
         Assertions.assertArrayEquals(expected, actual);
@@ -35,7 +35,7 @@ public class SpeedsGamesTest {
 
         int[] players = {5, 0, 2};
 
-        int[] expected = {0, 2};
+        int[] expected = {5,0, 2};
         int[] actual = SpeedGames3.speedCheckWin(players);
 
         Assertions.assertArrayEquals(expected, actual);
